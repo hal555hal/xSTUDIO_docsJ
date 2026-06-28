@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The File System Browser &mdash; xStudio 1.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=1f29e9d3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The Viewport" href="viewport.html" />
+    <link rel="prev" title="The Media List Panel" href="media_list.html" />
+    <link href="../../_static/xstudio_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xStudio
+          </a>
+              <div class="version">
+                1.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">xSTUDIO User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="interface.html">The xSTUDIO Interface</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="layouts.html">Custom Interface Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="playlists.html">The Playlist Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="media_list.html">The Media List Panel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The File System Browser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-use-the-browser">How to Use the Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="viewport.html">The Viewport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeline.html">The Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transport.html">Transport Controls and Toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/workflow.html">Workflow Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">xSTUDIO Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xStudio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">xSTUDIO User Guide</a></li>
+          <li class="breadcrumb-item"><a href="interface.html">The xSTUDIO Interface</a></li>
+      <li class="breadcrumb-item active">The File System Browser</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user_docs/interface/file_system_browser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-file-system-browser">
+<span id="file-system-browser"></span><h1>The File System Browser<a class="headerlink" href="#the-file-system-browser" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>2026年5月:この機能は Windows 向けにはまだ <em>完全に</em> 準備が整っていませんが、Mac および Linux ビルドでは利用可能です。Windows への互換性も間もなく提供される予定です。</p>
+</div>
+<figure class="align-center" id="id1">
+<img alt="The File System Browser." src="../../_images/file-system-browser-1.png" />
+<figcaption>
+<p><span class="caption-text">The File System Browser.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>この panel は、ローカルおよびネットワーク上のファイルシステムのためのインターフェースを提供します。左側にはドライブのフォルダー構造をナビゲートするためのディレクトリツリービューが表示され、右側には「フルスキャン」 (再帰的なフォルダー検索) を実行した際に、ディレクトリ内で検出されたメディアおよびそこに含まれるフォルダー内のすべてのメディアを表示する結果 panel が配置されています。</p>
+<p>このインターフェースの主な機能は以下の通りです :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>すべてのサブフォルダーへの再帰処理を含む、ファイルシステムディレクトリの高速なマルチスレッドスキャン。</p></li>
+<li><p>迅速な確認を可能にする、メディア項目の即時プレビュー読み込み。</p></li>
+<li><p>連番画像 (ファイル名にフレーム番号が含まれる多数の個別ファイルで構成される単一のメディア項目) の識別。</p></li>
+<li><p>最近アクセスしたフォルダーを表示する履歴ボタンと、お気に入りの場所を保存できるユーザーピン留めフォルダー機能。</p></li>
+<li><p>パスバーに入力する際、ディレクトリ名を自動補完する機能。</p></li>
+<li><p>高速読み込みに対応したサムネイルビュー。</p></li>
+<li><p>複数選択したメディアを Playlist または Media List panels へドラッグ＆ドロップで読み込む機能。</p></li>
+<li><p>現在のプレイリストにメディアを読み込むダブルクリック操作。</p></li>
+<li><p>指定したメディア項目の場所で通常のファイルシステムブラウザーを開く「Reveal in System Browser (システムブラウザーで表示)」機能。</p></li>
+</ul>
+</div></blockquote>
+<section id="how-to-use-the-browser">
+<h2>How to Use the Browser<a class="headerlink" href="#how-to-use-the-browser" title="Link to this heading"></a></h2>
+<p>ブラウザーの左側のセクションは、ファイルシステムのシンプルなツリービューです。ナビゲーションを開始するには、左側のディレクトリビューで次のように操作します :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ディレクトリボタンをクリックすると、そのディレクトリ内 (サブフォルダーは除く) のメディアがスキャンされます。</p></li>
+<li><p>ディレクトリの横にあるシェブロン (矢印) ボタンをクリックすると、そのディレクトリが展開され、サブフォルダーが表示されます。</p></li>
+<li><p>ディレクトリの横にある「Full Scan」ボタンをクリックすると、そのディレクトリとすべてのサブフォルダーの <strong>ディープスキャン</strong> を実行し、メディアを検索します。</p></li>
+<li><p>「Path」入力ボックスにパスを直接入力またはコピーしてナビゲートすることもできます。</p></li>
+<li><dl class="simple">
+<dt>パス入力ボックスには自動補完機能があります。入力を進めると、一致するサブフォルダーがドロップダウンボックスにリスト表示されます。</dt><dd><ul>
+<li><p>上/下矢印キーを使用してサブフォルダーを切り替えます。</p></li>
+<li><p>サブフォルダーを選択するには、右矢印キーを押し、Enter キーを押します。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>あるいは、サブフォルダーのディープスキャンを実行するためにフォルダーを選択した状態で、Path 入力ボックスのすぐ左側にあるディープスキャンボタンをクリックすることもできます。</p></li>
+<li><p>特定のフォルダーをインスペクトしていて、1 つ上の親フォルダーに移動したい場合は、(Path 入力ボックスの左側にある) 「Up」ボタンを押します。</p></li>
+</ul>
+</div></blockquote>
+<p>スキャナーによってメディア項目が見つかると、右側の結果 panel に表示されます。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>メディア項目を 1 回クリックすると、xSTUDIO Viewport でプレビューが表示されます。これによりメディアが読み込まれ、再生できるようになります。ただし、この時点ではメディアは xSTUDIO Session には追加されません。</p></li>
+<li><p>メディア項目をダブルクリックすると、現在のプレイリストに読み込まれます。</p></li>
+<li><p>CTRL キーまたは SHIFT キーを押しながらメディア項目をクリックすると、複数選択が行えます。</p></li>
+<li><p>File System Browser インターフェースから、選択した項目を Playlist/Subset/Contact Sheet/Timeline にドラッグ＆ドロップして追加します。</p></li>
+<li><p>選択した項目を Media List にドラッグ＆ドロップすると、現在インスペクトされている Media List (Playlist、Subset など) に追加されます。</p></li>
+<li><p>ツリー、グループ、サムネイルの各ビューでは、メディア項目は親フォルダーの下にリスト表示されます。フォルダー自体を Playlist や Media List にドラッグ＆ドロップして、そのフォルダー内 (すべてのサブフォルダーを含む) のすべてのメディア項目を読み込むことも可能です。</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ディレクトリツリーでディレクトリをクリックした際、その子フォルダーはすぐにはスキャンされません。クリックしたフォルダー内で見つかったメディアのみが表示されます。すべてのサブフォルダーのディープスキャンを実行するには、そのフォルダーの「Full Scan」ボタンをクリックしてください。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>フルスキャンを実行せず、メディアが見つからなかった場合でも、まだ探索できるサブフォルダーが存在するときは、右側の panel にフルスキャンを実行するためのボタンが表示されます。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>フルスキャンを実行しておらず、クリックしたフォルダー内でいくつかのメディアが検出された場合、(さらにメディアを含んでいる可能性のあるサブフォルダーが存在していても) フルスキャンボタンは表示されません。この場合は、パス入力ボックスのすぐ左側にある「Deep Scan」ボタンをクリックしてください。</p>
+</div>
+<section id="view-modes">
+<h3>View Modes<a class="headerlink" href="#view-modes" title="Link to this heading"></a></h3>
+<p>ブラウザーには 4 つの表示モードがあります。フラットリスト、完全なディレクトリ階層を表示するツリー、一部を圧縮したディレクトリビューを表示するグループ、そしてサムネイルビューです。</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/file-system-browser-list.png"><img alt="List View Mode" src="../../_images/file-system-browser-list.png" style="width: 892.8px; height: 391.8px;" /></a>
+<figcaption>
+<p><span class="caption-text">The list interface.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/file-system-browser-group.png"><img alt="Group View Mode" src="../../_images/file-system-browser-group.png" style="width: 892.1999999999999px; height: 391.2px;" /></a>
+<figcaption>
+<p><span class="caption-text">The grouped interface.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/file-system-browser-thumbs.png"><img alt="Thumbnails View Mode" src="../../_images/file-system-browser-thumbs.png" style="width: 892.8px; height: 390.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">The thumbnail interface.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="file-system-browser-walkthrough">
+<h3>File System Browser Walkthrough<a class="headerlink" href="#file-system-browser-walkthrough" title="Link to this heading"></a></h3>
+<p>この短い動画では、ナビゲーションや読み込みを含む、File System Browser の使用方法をデモしています。</p>
+<center><video src="../../_static/file-browser-01.webm" width="720" height="366" controls></video></center></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="media_list.html" class="btn btn-neutral float-left" title="The Media List Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="viewport.html" class="btn btn-neutral float-right" title="The Viewport" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DNeg.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

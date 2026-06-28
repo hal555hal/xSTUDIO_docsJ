@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Media List Panel &mdash; xStudio 1.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=1f29e9d3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The File System Browser" href="file_system_browser.html" />
+    <link rel="prev" title="The Playlist Panel" href="playlists.html" />
+    <link href="../../_static/xstudio_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xStudio
+          </a>
+              <div class="version">
+                1.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">xSTUDIO User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="interface.html">The xSTUDIO Interface</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="layouts.html">Custom Interface Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="playlists.html">The Playlist Panel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The Media List Panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#media-selection-and-viewing">Media Selection and Viewing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#media-list-context-menu">Media List Context Menu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuring-media-list-columns">Configuring Media List Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="file_system_browser.html">The File System Browser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewport.html">The Viewport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timeline.html">The Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transport.html">Transport Controls and Toolbar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workflow/workflow.html">Workflow Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">xSTUDIO Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xStudio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">xSTUDIO User Guide</a></li>
+          <li class="breadcrumb-item"><a href="interface.html">The xSTUDIO Interface</a></li>
+      <li class="breadcrumb-item active">The Media List Panel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user_docs/interface/media_list.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-media-list-panel">
+<span id="media-list-panel"></span><h1>The Media List Panel<a class="headerlink" href="#the-media-list-panel" title="Link to this heading"></a></h1>
+<figure class="align-center" id="id1">
+<img alt="The Media List in 'List' mode." src="../../_images/media-list-list-01.png" />
+<figcaption>
+<p><span class="caption-text">The Media List in ‘List’ mode.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Media List は、現在 <em>inspected (インスペクト対象)</em> になっている Playlist、Subset、Contact Sheet、または Sequence 内のメディアの順序付きリストを表示するスクロール可能なウィンドウです。<em>inspected</em> と <em>viewed</em> のプレイリスト項目の違いに関する詳細については、<a class="reference internal" href="playlists.html#inspecting-playlist-media"><span class="std std-ref">Inspecting playlist media</span></a> を参照してください。</p>
+<p>Media List には、panels の右上にあるボタンで切り替え可能な 2 つの表示オプションがあります。リストモード (上の図) またはサムネイルモード (下の図) です。</p><figure class="align-center" id="id2">
+<img alt="The Media List in 'Thumbnail' mode." src="../../_images/media-list-tiles-01.png" />
+<figcaption>
+<p><span class="caption-text">The Media List in ‘Thumbnail’ mode.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="media-selection-and-viewing">
+<h2>Media Selection and Viewing<a class="headerlink" href="#media-selection-and-viewing" title="Link to this heading"></a></h2>
+<p>Media List 内の任意のメディア項目を 1 回クリックすると、それが選択されます (すでに複数選択の一部になっていない場合)。Playlist または Subset の場合、選択したメディアによって xSTUDIO Viewport で再生されるメディアが決定されます。ただし、Compare Modes や Sequence では、選択は再生されるメディアに影響しません。<em>viewed (表示対象)</em> の Playlist/Subset/Contact Sheet/Sequence が選択したものと異なっていても、Media List から特定のメディア項目を表示したい場合は、その項目を <em>ダブルクリック</em> することで、表示対象の Playlist または Subset が選択した Playlist または Subset に強制的に切り替わります。</p>
+<p>また、複数のメディアを選択することも可能であり、これは Playhead の比較モードを活用するために必要となります：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>複数選択を行うには、CTRL キーまたは SHIFT キーを押しながらメディア項目をクリックします。</p></li>
+<li><p>項目を選択した順序が登録され、メディアビューの左端の列にインジケーターとして示されます。</p></li>
+<li><p><em>すでに選択されている</em> メニア項目をクリックした場合、選択状態は変わりませんが、クリックしたメディアが Viewport で再生されます (別のプレイリストを表示していない場合)。</p></li>
+<li><p>選択を解除するには、選択されていないメディア項目をクリックするか、「CTRL+D」のホットキーを使用します。</p></li>
+<li><p>プレイリスト内のすべての項目を選択するには、「CTRL+A」のホットキーを使用します。</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>xSTUDIO の <a class="reference internal" href="../workflow/compare_modes.html#compare-modes"><span class="std std-ref">Compare Modes</span></a> を使用するには、複数選択が必要です。</p>
+</div>
+</section>
+<section id="media-list-context-menu">
+<h2>Media List Context Menu<a class="headerlink" href="#media-list-context-menu" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id3">
+<img alt="The Media List context menu." src="../../_images/media-list-menu-01.png" />
+<figcaption>
+<p><span class="caption-text">Media List のコンテキストメニュー。Media List panels の右上にある「More」ボタン、またはマウスの右クリックでアクセスできます。</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Media List 内でマウスを右クリックすると、選択したメディアに関連するさまざまなアクションにアクセスできるポップアップメニューが表示されます。このメニューから、選択したメディアを新しい Playlist、Subset、Contact Sheet、Sequence に移動またはコピーできます：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>独自のルールに従って、特定のステータスを持つメディアをハイライトするためのメディア「フラグ (flag)」カラーを設定します。</p></li>
+<li><p>メディアを選択します (すべて選択、オフラインメディアのみ選択)。</p></li>
+<li><p>メディアを新しい Playlist や Subset などにコピーまたは移動します。</p></li>
+<li><p>選択したメディア項目を複製します。</p></li>
+<li><p>ディスク上のメディアの場所をシステムファイルブラウザーで表示します。</p></li>
+<li><p>選択したメディアのファイル名またはファイルパスをクリップボードにコピーします。</p></li>
+<li><p><a class="reference internal" href="../workflow/quick_view.html#quick-view"><span class="std std-ref">QuickView</span></a> ウィンドウを開いて、選択したメディアを再生します。</p></li>
+<li><dl class="simple">
+<dt>メディアを再読み込みします (キャッシュされたフレームを破棄し、フレーム範囲を再スキャンして再読み込みします)。</dt><dd><p>このオプションは、たとえばまだレンダリングが進行中の CG レンダーやコンポジションなどを読み込んでいる場合に便利です。ディスク上にさらにフレームが出力されると、Reload メニューオプションまたは関連するホットキーを押すことで、メディア項目がリフレッシュされ、新しく追加されたフレームが読み込まれます。</p>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference internal" href="../appendix/python_snippets.html#python-snippets"><span class="std std-ref">Python Snippets</span></a> (独自のカスタム Python スクリプト) を実行します。</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="configuring-media-list-columns">
+<h2>Configuring Media List Columns<a class="headerlink" href="#configuring-media-list-columns" title="Link to this heading"></a></h2>
+<p>Media List のリストモードでは、メタデータが列 (カラム) に表示され、これらは完全にカスタマイズ可能です。列の追加、削除、並べ替えができるほか、表示するメタデータを選択することもできます。また、メタデータ文字列の一部を抽出して表示するための正規表現を設定することも可能です。</p><figure class="align-center" id="id4">
+<img alt="The Media List configuration dialog." src="../../_images/media-list-configure-01.png" />
+<figcaption>
+<p><span class="caption-text">The Media List configuration dialog.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Media List の列を構成するには：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>列ヘッダーのいずれかの上にマウスをホバーします。列ヘッダーに cog (歯車) アイコンが表示されます。これをクリックして構成ダイアログを開きます。</p></li>
+<li><p>Remove/Move Left/Move Right ボタンを使用して、列を削除または移動します。</p></li>
+<li><p>列のタイトルを設定します。</p></li>
+<li><p>ドロップダウンから列のインジケーターのタイプを選択します。固定された目的を持つ「標準」タイプを選ぶか、または <strong>Metadata Value</strong> を選択します。</p></li>
+<li><dl class="simple">
+<dt><strong>Metadata Value</strong> を選択した場合は、次に <strong>Metadata Owner</strong> ドロップダウンでメタデータのソースをどこにするか選択します。</dt><dd><ul class="simple">
+<li><p><strong>Media</strong> - Media 項目は Media Source のコンテナであり、<em>メタデータを追加する自動スクリプトが設定されている場合にのみメタデータを持ちます。 miniature は通常、パイプライン統合システムがセットアップされているポストプロダクションスタジオで作業するユーザーにのみ該当します。</em>詳細については <span class="xref std std-ref">Pipeline Integration</span> を参照してください。スタジオ外で作業する個人のユーザーの場合、ここでの <em>Media</em> オプションは空になり、役に立ちません。</p></li>
+<li><p><strong>Media Source (Image)</strong> - これを選択すると、Media 項目の <em>画像</em> ソースに関連するメタデータ値を検索できるようになります。</p></li>
+<li><p><strong>Media Source (Audio)</strong> - これを選択すると、Media 項目の <em>音声</em> ソースに関連するメタデータ値を検索できるようになります。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>次に、メタデータ辞書からフィールドを選択するために <strong>Metadata Path</strong> を設定する必要があります。</dt><dd><ul class="simple">
+<li><p>Media Source を起源とするメタデータは、本質的にメディアファイルから抽出されたメタデータの辞書です。たとえば、EXR 画像は画像ヘッダーに多くのデータを格納できます。xSTUDIO はこのデータを読み取り、Media Source のメタデータとして保存します。</p></li>
+<li><p>メタデータフィールドを選択する最も簡単な方法は、対応するボックスの右側にあるドキュメント拡大鏡ボタンをクリックすることです。</p></li>
+<li><p>新しいウィンドウが開き、Media Source のすべてのメタデータフィールドがリスト表示されます。</p></li>
+<li><p>メタデータフィールドのリスト内のいずれかの行をクリックして、Media List の列用に選択します。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>(<em>高度な設定</em>) 正規表現を使用してメタデータフィールド値とマッチングを行い、完全なファイルパスのような長い文字列から有用なセクションを抽出します。</dt><dd><ul class="simple">
+<li><p>正規表現は強力ですが、使いこなすのが面倒です！馴染みがない場合は、インターネットで調べて詳細を学んでください。</p></li>
+<li><p>たとえば、ファイルパスのメタデータ値を選択したとします。ファイルパスが <strong>/Users/joe/media/ARX/001_prd_0200/renders/comp/C_001_prd_0200_comp_v001.mp4</strong> である場合、</p></li>
+<li><p>視覚的に、ファイルパス全体を表示することは有用ではありません。単に <strong>C_001_prd_0200_comp_v001</strong> だけを表示したい場合があります。</p></li>
+<li><p>これを行うには、正規表現を次のように設定します：<strong>.+/([_a-zA-Z0-9]+_v[0-9]+).mp4</strong></p></li>
+<li><p>And we set the format expression to <strong>$1</strong> to show the 1st captured string.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<section id="configuring-media-list-walkthrough">
+<h3>Configuring Media List Walkthrough<a class="headerlink" href="#configuring-media-list-walkthrough" title="Link to this heading"></a></h3>
+<p>この短い動画では、Media List を分かりやすくし、情報を追加するために、正規表現とメタデータフィールドを使用する方法を実演しています。</p>
+<center><video src="../../_static/media-list-config-01.webm" width="720" height="366" controls></video></center></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="playlists.html" class="btn btn-neutral float-left" title="The Playlist Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="file_system_browser.html" class="btn btn-neutral float-right" title="The File System Browser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DNeg.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

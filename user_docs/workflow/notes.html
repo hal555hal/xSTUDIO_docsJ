@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes and Annotations &mdash; xStudio 1.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=1f29e9d3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Grading Tool" href="grading.html" />
+    <link rel="prev" title="Compare Modes" href="compare_modes.html" />
+    <link href="../../_static/xstudio_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xStudio
+          </a>
+              <div class="version">
+                1.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">xSTUDIO User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/interface.html">The xSTUDIO Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="workflow.html">Workflow Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="playback.html">Video Playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compare_modes.html">Compare Modes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Notes and Annotations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-note">Adding a Note</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-a-note">Modifying a Note</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigating-notes">Navigating Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#drawing-annotations">Drawing Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting-annotations">Exporting Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting-notes-csv-with-annotations">Exporting Notes CSV with Annotations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="grading.html">Grading Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_view.html">QuickView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_output.html">Video Output (Rendering)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdi_output.html">SDI: Video Output with Blackmagic Designs Decklink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hotkeys.html">Hotkeys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">xSTUDIO Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xStudio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">xSTUDIO User Guide</a></li>
+          <li class="breadcrumb-item"><a href="workflow.html">Workflow Tools</a></li>
+      <li class="breadcrumb-item active">Notes and Annotations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user_docs/workflow/notes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="notes-and-annotations">
+<span id="notes"></span><h1>Notes and Annotations<a class="headerlink" href="#notes-and-annotations" title="Link to this heading"></a></h1>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/annotations-01.png"><img alt="xSTUDIO Annotations in Action" src="../../_images/annotations-01.png" style="width: 958.5px; height: 540.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">xSTUDIO Annotations in Action</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>xSTUDIO の Notes 機能を使用すると、テキストコメントや画面上のスケッチをメディアに素早く簡単にタグ付けできます。これにより、ユーザーは同僚とテキストや視覚的なフィードバックを記録・共有したり、自分用にアノテーションを追加したりすることができます。</p>
+<p>Notes は、Media 項目の気になるフレームやフレーム範囲をマークするための空のブックマークとしても便利です。レビュー中に、Notes パネルをショートカットツールとして使用し、これらのフレーム間をジャンプしたりループ再生したりすることができます。</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/notes-panel-01.png"><img alt="The Notes panel" src="../../_images/notes-panel-01.png" style="width: 873.0px; height: 321.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">The Notes panel</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="adding-a-note">
+<h2>Adding a Note<a class="headerlink" href="#adding-a-note" title="Link to this heading"></a></h2>
+<p>Media 項目の任意のフレームに Note を作成する方法は 3 つあります。Note は常に、画面上に表示されているメディアの現在の（画面上の）フレームに追加されます：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>「;」キーを押すと、現在のフレームに即座に空の Note が作成されます。</p></li>
+<li><p>「N」ホットキーを押すか（または Viewer の左上にある Notes ボタンをクリックして）、Notes インターフェースを表示します。Notes インターフェースにある「Add Note」ボタンをクリックします。</p></li>
+<li><p>「D」ホットキーを押して Annotation Tool のツールボックスを表示します。Viewer 内の画像の上にストロークやシェイプを描画し始めると、そのフレームに Note が自動的に作成されます。</p></li>
+</ul>
+</div></blockquote>
+<p>画面上のスケッチは、常に特定のフレームの現在の Note に紐付けられます。スケッチの作成を開始したときに Note が存在しない場合は、空の Note が自動的に作成されます。</p>
+</section>
+<section id="modifying-a-note">
+<h2>Modifying a Note<a class="headerlink" href="#modifying-a-note" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Notes インターフェースの Note 内に、Notes のテキストコンテンツを直接入力します。</p></li>
+<li><p>「subject」ボックスをクリックして、Note の件名/タイトルを変更します。</p></li>
+<li><p>In/Out ポイントの「set」ボタンを使用して、Note のデュレーションを延長したり、メディアのフレーム範囲内での位置を移動したりします。</p></li>
+<li><p>ドロップダウンから Note のカテゴリーを選択できます。ドロップダウンに表示されるカテゴリーは設定可能です（Preferences に関する付録のセクションを参照してください）。</p></li>
+<li><p>Note を<em>削除</em>するには、Note を右クリックして「Remove Note」を選択するか、Note エントリの右上にある「X」ボタンをクリックします。</p></li>
+</ul>
+</section>
+<section id="navigating-notes">
+<h2>Navigating Notes<a class="headerlink" href="#navigating-notes" title="Link to this heading"></a></h2>
+<p>Note の存在は、トランスポートバーの Timeline の下半分に表示されます。インジケーターの色は、Note のカテゴリーに関連付けられた色と一致します。
+キーボードの「,」および「.」キーを押すと、Timeline 上の前後の Note に Playhead がジャンプします。
+Notes ペインでは、Scope を Playlist または Media の間で切り替えることができます。「playlist」オプションは現在の Playlist 内のすべての Notes を表示し、「Media」オプションは現在の（画面上の）Media 項目の Notes のみを表示します。
+Notes ペインにある Note のサムネイルをクリックすると、対応するメディアとペインに切り替わります。
+Notes ペインにある Note の「Loop」ボタンをクリックすると、Playhead のループ In/Out ポイントが Note のデュレーションと一致するように設定されます。</p>
+</section>
+<section id="drawing-annotations">
+<h2>Drawing Annotations<a class="headerlink" href="#drawing-annotations" title="Link to this heading"></a></h2>
+<center><video src="../../_static/annotations-01.webm" width="720" height="366" controls></video></center><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Drawing Tools ボックスは、「D」ホットキーを押すか、Viewer の左上にあるペンアイコンのボタンをクリックすることで表示または非表示にできます。xSTUDIO の描画ツールは簡単に使いこなすことができます。Viewer 上に直接ストローク、シェイプ、またはテキストキャプションを描画し始めるだけです。前述のように、新しいアノテーションを作成すると常に「Note」が作成されます。</p>
+<p>描画は（ラスタライズされたピクセルではなく）「ベクターベース」であり、グラフィックスカードによって「オンザフライ」でレンダリングされます。Viewport をズームイン・ズームアウトしても、ブラシストロークは常にピクセル化（ジャギー）することなくレンダリングされます。描画は画像の境界線の外側まで拡張できるため、必要に応じて画像の横や上下のスペースにスケッチを自由に追加できます。</p>
+<p>ペンタブレットのような筆圧感知入力デバイスを使用する場合、フリーハンドのブラシツールはペンの圧力に反応します。Drawing Tools ボックスには、この挙動を調整するためのいくつかのコントロールが用意されています。<strong>Softness</strong> はブラシのエッジの硬さを設定し、鮮明な輪郭から柔らかくぼかした（フェザー）ストロークまで変化させます。<strong>Size Pressure Sensitivity</strong> は、ストロークの幅がペンの圧力にどれだけ強く反応するかをコントロールします。ゼロに設定するとストロークは一定の幅を維持し、値を大きくすると、軽い圧力では細い線が、強い圧力では設定されたブラシサイズを上限とする太い線が描かれます。<strong>Opacity Pressure Sensitivity</strong> もストロークの不透明度に対して同様に機能し、軽いストロークで徐々に色を重ねたり、強い圧力で完全に不透明なマークを描いたりすることができます。</p>
+<p>「Laser」フリーハンド描画モードを使用すると、数秒かけて消えるまでフェードアウトする、一時的なストロークを描くことができます。これは、レビューに同席している同僚に画像の一部分を強調して示す際に、ストロークを何度も消去したりUndoする必要がないため便利です。</p>
+<p>テキストキャプションを入力するには、「Text」ツールを選択し、Viewport 内をクリックしてキャプションを配置してからタイピングを開始します。キャプションボックスの角にあるハンドルを使用すると、ボックスを移動およびスケールできます。テキストキャプションは、テキストの入力中および入力後に、配置、サイズ変更、色変更、スケールを行うことができます。</p>
+<p>「Dodge」および「Burn」ツールを使用すると、画像の上をペイントすることで、その領域を局所的に明るくしたり暗くしたりできます。これらはフリーハンドブラシのように動作しますが、色を塗るのではなく、その下にあるピクセルを変化させます。これらのツールは筆圧を感知しません。各ストロークが一定の量を適用し、その効果は累積されるため、同じ領域に何度もブラシを重ねると、効果が段階的に強くなります。<strong>Intensity</strong> スライダーは、各ストロークが画像に与える影響の大きさをコントロールします。低い値では徐々に重ねやすい繊細な効果になり、高い値では1回のパスで強力な変化をもたらします。<strong>Add</strong> および <strong>Mult</strong> ボタンは、純粋な黒に対して調整をどのように適用するかを選択します。<strong>Add</strong> モードではストロークの値が下層のピクセルに加算されるため、シャドウが持ち上がり、完全に黒い領域でも効果を確認できます。<strong>Mult</strong> モードではストロークの値が下層のピクセルに乗算されるため、純粋な黒は黒のまま維持され、画像にすでに存在する明るさに比例して効果がスケールします。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>アノテーションを描画する際、画像からペンストローク用の色をピックできます。<strong>デフォルトのショートカットキー「V」</strong>を使用してカラーピッカーをアクティブにし、画像上をクリックしてから、新しい色で描画を続けます。ピッカーは、ポインターの下にあるピクセルの色を取得するか、（マウスボタンを押し下げた状態で）ポインターを領域内でドラッグしたときに平均ピクセル値を計算するように設定できます。</p>
+</div>
+</section>
+<section id="exporting-annotations">
+<h2>Exporting Annotations<a class="headerlink" href="#exporting-annotations" title="Link to this heading"></a></h2>
+<p>アノテーションを単一の画像または画像セットとしてエクスポートするには、<strong>File -&gt; Export</strong> メニューに移動し、<em>「Annotations …」</em>オプションを選択してアノテーションエクスポートウィザードを開きます。また、アノテーションを Grease Pencil パッケージとしてエクスポートし、Blender、Maya、3DS-Max、または同フォーマットをサポートするその他のアプリケーションにインポートするオプションもあります。これにより、xSTUDIO で描画した内容を 3D アプリケーションに読み込み、3D Viewport 内でアニメーションの Notes を視覚化できるようになります。</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/annotation-export-01.png"><img alt="Annotations export wizard" src="../../_images/annotation-export-01.png" style="width: 565.0px; height: 417.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Annotations エクスポートウィザード</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>このウィザードには、アノテーションを簡単にエクスポートするためのいくつかのオプションが用意されています：</p>
+<ul class="simple">
+<li><p><strong>Scope:</strong> ここに用意されているオプションの説明を表示するには、(?) マークのアイコンにマウスカーソルを合わせます。</p></li>
+<li><p><strong>Export Mode:</strong> ここに用意されているオプションの説明を表示するには、(?) マークのアイコンにマウスカーソルを合わせます。</p></li>
+<li><p><strong>File Type:</strong> エクスポートする画像のファイルタイプを選択します。オプションは PNG、JPG、TIFF です。</p></li>
+<li><p><strong>Output Resolution:</strong> エクスポートする画像の解像度を選択します。</p></li>
+<li><p><strong>Image(s) name:</strong> エクスポートする単一または複数の画像、あるいは Grease Pencil パッケージの名前を設定します (エクスポートモードによって異なります)。</p></li>
+<li><p><strong>Output Folder:</strong> エクスポートする単一または複数の画像、あるいは Grease Pencil パッケージのファイルシステム上の保存先を設定します (エクスポートモードによって異なります)。</p></li>
+</ul>
+</section>
+<section id="exporting-notes-csv-with-annotations">
+<h2>Exporting Notes CSV with Annotations<a class="headerlink" href="#exporting-notes-csv-with-annotations" title="Link to this heading"></a></h2>
+<p>Notes を CSV ファイルとしてエクスポートするには、<strong>File -&gt; Export</strong> メニューに移動し、<em>「Notes …」</em>オプションを選択します。ファイルダイアログが開くので、エクスポートする CSV ファイルの保存先と名前を選択します。エクスポートされた CSV ファイルには、Note の件名、テキストコンテンツ、カテゴリー、In/Out フレーム範囲（タイムコード形式）、Note が添付されているメディアのファイルパス、対応する Note フレームのメディアのスクリーンキャプチャである JPEG 画像へのパス、および Notes 自体の本文の列が含まれます。エクスポート処理の一部として、（.csv ファイル名から拡張子を除いた名前を使用して）フォルダーも作成されます。すべての Note（描き込まれたアノテーションを含む）に対して、対応するメディアフレームの JPEG 画像がこのフォルダー内にレンダリングされます。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="compare_modes.html" class="btn btn-neutral float-left" title="Compare Modes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="grading.html" class="btn btn-neutral float-right" title="Grading Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DNeg.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Modes &mdash; xStudio 1.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=1f29e9d3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Notes and Annotations" href="notes.html" />
+    <link rel="prev" title="Video Playback" href="playback.html" />
+    <link href="../../_static/xstudio_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xStudio
+          </a>
+              <div class="version">
+                1.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">xSTUDIO User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/interface.html">The xSTUDIO Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="workflow.html">Workflow Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="playback.html">Video Playback</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Compare Modes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comparing-media-in-playlists-and-subsets">Comparing Media in Playlists and Subsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comparing-media-in-contact-sheets">Comparing Media in Contact Sheets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comparing-media-in-sequences-timelines">Comparing Media in Sequences (Timelines)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compare-modes-walkthrough">Compare Modes Walkthrough</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="notes.html">Notes and Annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grading.html">Grading Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_view.html">QuickView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_output.html">Video Output (Rendering)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdi_output.html">SDI: Video Output with Blackmagic Designs Decklink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hotkeys.html">Hotkeys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">xSTUDIO Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xStudio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">xSTUDIO User Guide</a></li>
+          <li class="breadcrumb-item"><a href="workflow.html">Workflow Tools</a></li>
+      <li class="breadcrumb-item active">Compare Modes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user_docs/workflow/compare_modes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compare-modes">
+<span id="id1"></span><h1>Compare Modes<a class="headerlink" href="#compare-modes" title="Link to this heading"></a></h1>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/compare-modes-01.png"><img alt="The xSTUDIO Compare Modes Menu" src="../../_images/compare-modes-01.png" style="width: 504.59999999999997px; height: 313.8px;" /></a>
+<figcaption>
+<p><span class="caption-text">The xSTUDIO Compare Modes Menu</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>「Compare」と表示された Toolbar のボタンは、現在表示されている Playlist/SubSet/Contact Sheet または Sequence の Playhead に対する Compare モードを設定します。xSTUDIO のシンプルな Compare ワークフローを理解することは、アプリケーションを最大限に活用するために重要です。</p>
+<table class="docutils align-left" id="id3" style="width: 90%">
+<caption><span class="caption-text">Compare Modes Summary</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Compare Mode</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Off</p></th>
+<td><p>比較対象の最初の Media 項目 / ビデオトラックのみが Viewport に表示されます</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>A/B</p></th>
+<td><p>比較対象のすべての項目が読み込まれ、フレーム番号が整列されます。<em>常に1つの項目のみが Viewport に表示されます</em>。表示する項目を切り替えるには、1 … 9 のテンキーまたは Up/Down 矢印キーを使用します。直接的な視覚比較を容易にするため、このモードでは画面上のソースを瞬時に切り替えることができます。</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>String</p></th>
+<td><p>比較対象のすべての項目が時間軸上で一連の「つなぎ（String）」状態になり、選択された順序で Sequence として再生されます。このモードは、Sequence を表示している場合は効果がありません。</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Grid</p></th>
+<td><p>比較対象のメディアが Viewport 内に Grid 状に自動配置されます。レイアウトの順序は、左から右、次に上から下へと並びます。Grid メニューオプションの横にある設定ボタンをクリックすると、Grid タイル間の間隔や項目の配置に使用される Aspect 値を変更できます。</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Horizontal</p></th>
+<td><p>Grid モードに似ていますが、画像が1つの行に配置されます</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Vertical</p></th>
+<td><p>Grid モードに似ていますが、画像が1つの列に配置されます。</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Wipe</p></th>
+<td><p>マウスポインターでドラッグできる画面上のハンドルを使用して、2枚の画像をワイプしながら比較できます。比較対象として3つ以上の項目が選択されている場合 (または 3つ以上の項目を持つ Contact Sheet や、3つ以上の表示可能なビデオトラックを持つ Sequence (Timeline) を使用している場合)、テンキーの 1, 2 … 9 を使用して、比較する 2枚の画像を選択できます。</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>A/B Difference</p></th>
+<td><p>A/B モードに似ており、比較対象の画像セットから2枚の画像が合成されます。<strong>A</strong> 画像のピクセル値から <strong>B</strong> 画像のピクセル値を引いた値を表す Luminance（輝度）画像として表示されます。</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>A/B Blend</p></th>
+<td><p>A/B モードに似ており、比較対象の画像セットから2枚の画像がシンプルなブレンド処理で合成されます。</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Add</p></th>
+<td><p>比較対象の画像セットのすべての画像がシンプルな加算（Add）処理で合成されます。</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Over</p></th>
+<td><p>比較対象の画像セットのすべての画像が「Over」処理で合成されます。これは、比較スタックの上位の画像が適切なマスクを持つアルファチャンネル（Alpha channel）を含んでいる場合にのみ有効です。このオプションは Sequence で使用する場合に特に強力で、たとえば トラック 2 がトラック 1 の上に合成されるため、トラック 2 に前景の項目を読み込み、トラック 1 に背景画像を配置することができます。</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Screen</p></th>
+<td><p>比較対象の画像セットのすべての画像がスクリーン（Screen）処理で合成されます。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>比較する項目はいくつでも選択できます。では、たとえば2枚の画像を表示する A/B モードや Wipe モードではどのように動作するのでしょうか？答えは、1, 2…9 のテンキー（テンキーパッドではなく、メインの Keyboard の数字キー）を使って、比較する画像を切り替えることができます。比較する項目が 8 つあり、項目 4 と 5 を切り替えたい場合は、4 と 5 のキーを押すだけです。</p>
+</div>
+<section id="comparing-media-in-playlists-and-subsets">
+<h2>Comparing Media in Playlists and Subsets<a class="headerlink" href="#comparing-media-in-playlists-and-subsets" title="Link to this heading"></a></h2>
+<p><em>Playlist、Subset、Contact Sheet の概要については、:ref:`Playlists Interface &lt;_playlist_panel&gt;` セクションを参照してください。</em></p>
+<p>Playlist や Subset での画像比較は、内部のメディアの選択状態によって<em>動的に駆動</em>されます。<span class="xref std std-ref">Media List Panel</span> で選択された Media 項目が、現在の Compare モードに従って比較用に読み込まれます。Media 項目が選択された順序によって、Compare モードの並び順が決まります。そのため、たとえば「Over」モードを使用している場合、Media List で 11 番目の Media 項目を選択し、<em>その後に</em> 10 番目の Media 項目を選択すると、Viewport 内では 11 番目の項目が 10 番目の項目の上に合成されます。</p>
+</section>
+<section id="comparing-media-in-contact-sheets">
+<h2>Comparing Media in Contact Sheets<a class="headerlink" href="#comparing-media-in-contact-sheets" title="Link to this heading"></a></h2>
+<p>Contact Sheet が Playlist や Subset と異なる点は、Media 項目の選択状態に関わらず、<em>Contact Sheet 内のすべてのメディア</em>が比較用に読み込まれる点のみです。そのため、たとえばいくつかの Media 項目を Viewport 内に Grid 状に配置したい場合は、それらの Media 項目を Contact Sheet に追加して Compare モードを「grid」に設定します。その後、Contact Sheet を表示すると、その Grid ビューが得られます。</p>
+</section>
+<section id="comparing-media-in-sequences-timelines">
+<h2>Comparing Media in Sequences (Timelines)<a class="headerlink" href="#comparing-media-in-sequences-timelines" title="Link to this heading"></a></h2>
+<p>xSTUDIO の Compare モードシステムは、マルチトラックの編集に適用した際、いくつかの便利な機能を提供します：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Compare モードが <strong>Off</strong> に設定されている場合、Viewport には Timeline の編集のベイクダウン（最終合成結果）のみが表示され、Timeline 内の任意のフレームにおいて最上位の表示可能なトラックがビデオとして提供されます。</p></li>
+<li><p>Compare モードが <strong>Off 以外</strong>に設定されている場合、アクティブな各ビデオトラックが個別に比較用に読み込まれます。したがって、たとえば Compare モードが <em>Grid</em> に設定されており、Sequence に 4 つの独立したビデオトラックがある場合、Viewport 内に 4 枚の画像が Grid 状に配置されて表示されます。それぞれの画像は、各ビデオトラックの現在のフレームになります。</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Compare モードを <em>Off</em> または <em>String</em> 以外に設定してメディアを比較する場合、選択したすべてのメディア/ビデオトラックのフレームを同時にデコードして保存するため、再生中にコンピューターの負荷が高くなります。xSTUDIO はシステムの性能を最大限に引き出すように最適化されているため、多くの場合、パフォーマンスに影響を与えることなく複数のソースを比較できますが、一度にあまりにも多くのソースを比較しようとすると、最終的に再生パフォーマンスに影響が及ぶ可能性があります。</p>
+</div>
+</section>
+<section id="compare-modes-walkthrough">
+<h2>Compare Modes Walkthrough<a class="headerlink" href="#compare-modes-walkthrough" title="Link to this heading"></a></h2>
+<p>この短いビデオでは、Compare モードが実際に動作している様子を紹介しています（すべてを網羅したデモではありません）。</p>
+<center><video src="../../_static/compare-modes-01.webm" width="720" height="366" controls></video></center></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="playback.html" class="btn btn-neutral float-left" title="Video Playback" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="notes.html" class="btn btn-neutral float-right" title="Notes and Annotations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DNeg.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

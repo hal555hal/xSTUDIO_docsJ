@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Output (Rendering) &mdash; xStudio 1.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=1f29e9d3"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SDI: Video Output with Blackmagic Designs Decklink" href="sdi_output.html" />
+    <link rel="prev" title="QuickView" href="quick_view.html" />
+    <link href="../../_static/xstudio_theme.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            xStudio
+          </a>
+              <div class="version">
+                1.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">xSTUDIO User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interface/interface.html">The xSTUDIO Interface</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="workflow.html">Workflow Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="playback.html">Video Playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compare_modes.html">Compare Modes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notes.html">Notes and Annotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grading.html">Grading Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quick_view.html">QuickView</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Video Output (Rendering)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-gets-rendered">What gets Rendered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-output-settings">Render Output Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#executing-monitoring-and-checking-a-render">Executing, Monitoring and Checking a Render</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-video-and-audio-codec-settings">Output Video and Audio Codec Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sdi_output.html">SDI: Video Output with Blackmagic Designs Decklink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hotkeys.html">Hotkeys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/index.html">Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release_notes/index.html">Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">xSTUDIO Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xStudio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">xSTUDIO User Guide</a></li>
+          <li class="breadcrumb-item"><a href="workflow.html">Workflow Tools</a></li>
+      <li class="breadcrumb-item active">Video Output (Rendering)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user_docs/workflow/video_output.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="video-output-rendering">
+<span id="video-output"></span><h1>Video Output (Rendering)<a class="headerlink" href="#video-output-rendering" title="Link to this heading"></a></h1>
+<p>xSTUDIOでは、広く普及している<a class="reference external" href="https://ffmpeg.org/ffmpeg.html">FFMpeg</a>アプリケーションを通じて利用可能なさまざまなビデオおよびオーディオコーデックを使用して、Playlists、Subsets、Contact Sheets、Timelinesをコンテナ化されたメディアファイル(mp4、mov、mkv、webmなど)にレンダリングできます。レンダリングする項目をPlaylistsペインで1つ以上選択し、右クリックしてコンテキストメニューを表示するか(またはメインのFileメニューを経由して)、「<em>Export-&gt;Render Selected Item(s) to Movie …</em>」を選択します。</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-01.png"><img alt="Export to movie menu" src="../../_images/export-to-movie-01.png" style="width: 619.2px; height: 380.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Use the context menu or File menu to launch the render wizard.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>これにより、出力ビデオのフォーマットを指定できる <strong>Render Video</strong> ダイアログが表示されます。</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-02.png"><img alt="Render Video dialog" src="../../_images/export-to-movie-02.png" style="width: 568.0px; height: 629.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">The Render Video allows you to fully specify your output video.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="what-gets-rendered">
+<h2>What gets Rendered<a class="headerlink" href="#what-gets-rendered" title="Link to this heading"></a></h2>
+<p>何がレンダリングされるかは、以下のシンプルなルールに従って、選択した項目のタイプによって決まります：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>PlaylistsおよびSubsets：</strong> PlaylistまたはSubset内のすべてのMedia項目は、PlaylistまたはSubset内での並び順を反映したリニアなシーケンスとして1つに「ストリング(連結)」されます。したがって、Playlist内に10個のビデオファイルがある場合、出力レンダリングでは10個の各クリップが順番に表示され、各ビデオファイル内のすべてのフレームが使用されます。</p></li>
+<li><p><strong>Contact Sheets：</strong> Contact Sheetは、xSTUDIOのUIに表示されているとおりに、同じレイアウト(Gridモードなど)かつソースとなるContact Sheetの対応するプレイヘッドと同じデュレーションで正確にレンダリングされます。</p></li>
+<li><p><strong>Sequences(Timelines)：</strong> Sequenceは、xSTUDIOセッションに表示されているとおりに正確にレンダリングされるため、トラックの非表示/表示、クリップの非表示/表示、および<a class="reference internal" href="compare_modes.html#compare-modes"><span class="std std-ref">Compare Mode</span></a>も同様に尊重されます。したがって、例えば、レンダリング対象のSequenceを選択する前にCompare Modeを「Grid」に設定することで、4つのビデオトラックを2x2の配置でレンダリングすることができます。</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>アノテーションやHUD項目(メディアメタデータのオーバーレイなど)のようなオーバーレイグラフィックスは、main interfaceで有効になっている限り、レンダリングに含まれます。<strong>重要：</strong> レンダリングの進行中にxSTUDIOのmain interfaceでHUDをオフにすると、HUDがオフにされた時点でレンダラーが処理していた箇所から、レンダリング結果からもHUDが消失します。<strong>そのため、レンダリングの進行中はHUDの設定を変更しないでください！</strong></p>
+</div>
+<aside class="topic">
+<p class="topic-title">アノテーションを書き込んだ単一のMedia項目をレンダリングするにはどうすればよいですか？</p>
+<p>対象となるMedia項目だけを含んだ新しい<a class="reference internal" href="../interface/playlists.html#subsets"><span class="std std-ref">Subset</span></a>を作成し、そのSubsetを選択して「<em>Export-&gt;Render Selected Item(s) to Movie …</em>」メニューオプションを実行するだけです。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">単一クリップの部分的な範囲(サブレンジ)をレンダリングするにはどうすればよいですか？</p>
+<p>その単一クリップだけを含んだシンプルな<a class="reference internal" href="../interface/timeline.html#timeline"><span class="std std-ref">Timeline</span></a>を作成します。Timeline上でクリップ自体を目的のフレーム範囲にトリミングするか、プレイヘッドのイン/アウト(ホットキー<strong>I</strong>および<strong>O</strong>)ポイントを使用して、レンダリングしたいフレームに一致するようにループ範囲を設定します。次に、PlaylistsパネルでそのミニSequenceが選択されていることを確認し、「<em>Export-&gt;Render Selected Item(s) to Movie …</em>」メニューオプションを実行します。その後、Render Videoパネルの「Use Loop」ボタンをクリックして、レンダリングのフレーム範囲を設定します(Timelineでループ範囲を設定するためにイン/アウトポイントを使用した場合)。</p>
+</aside>
+</section>
+<section id="render-output-settings">
+<h2>Render Output Settings<a class="headerlink" href="#render-output-settings" title="Link to this heading"></a></h2>
+<aside class="topic">
+<p class="topic-title">Output File / Output Frames</p>
+<p>レンダリング先のファイルパスを選択します。ファイルの拡張子によって作成されるコンテナのタイプが影響を受け、一部のコンテナは特定のビデオフォーマットと互換性がない場合があることに注意してください。例えば「.mp4」ファイルにApple ProResでエンコードされたビデオストリームを含めることはできません。</p>
+<p>また、フレームベースの出力(連番出力)を選択して、ナンバリングされたjpeg、tiff、またはpngファイルのシーケンスを生成することもできます。このモードでは、画像フレームと並行して出力する個別のオーディオファイル(wav、aiff、またはogg)を出力することも選択できます。このオプションを使用する場合は、目的のファイル拡張子(jpeg、tiff、png)を持つ出力ファイルを指定するだけです。レンダーダイアログは、出力に挿入されるパディングされたフレーム番号のプレースホルダーとして、出力パスに自動的に「#」記号を追加します。ハッシュ(#)の数を編集して、パディングの長さを変更できます。例えば、出力パスが /Users/ted/Videos/my_render.#####.jpg の場合、1001フレーム目は /Users/ted/Videos/my_render.01001.jpg になります。</p>
+<p>フレームをレンダリングする際にはこれらが適用されないため、ビデオおよびオーディオのエンコーディングオプションは無効(disabled)になることに注意してください。オーディオコーデックは、指定したオーディオファイルのファイル拡張子のみに依存します(.aiff、.wav、.oggなどがサポートされているファイルタイプです)。xSTUDIOは、各ファイルタイプに対してFFMPEGのデフォルトのオーディオエンコーディングパラメータをそのまま使用します。これはすべてのユースケースに適しているはずです。</p>
+</aside>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-06.png"><img alt="Render Video dialog for frames" src="../../_images/export-to-movie-06.png" style="width: 580.0px; height: 629.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Render Videoダイアログでは、.movや.mp4などのコンテナ化されたメディアエンコーディングではなく、<br>イメージシーケンス(連番)にレンダリングする場合、わずかに異なるオプションが表示されます。</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<aside class="topic">
+<p class="topic-title">Output Audio File</p>
+<p><span class="caption-text">Render Videoダイアログの表示は出力形式で変わります。.movや.mp4などのコンテナ形式ではなく、イメージシーケンス(連番)を選択した場合は、わずかに異なるオプションが表示されます。</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</aside>
+<aside class="topic">
+<p class="topic-title">First Frame Number</p>
+<p>このオプションは出力フレーム(連番)をレンダリングする場合にのみ表示されます。コンテナ化されたメディアファイルでは表示されません。出力されるイメージシーケンスの、最初のフレーム番号を設定するだけの機能です。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Render Range</p>
+<p>この設定はTimelinesにのみ適用されます。レンダリングする開始フレームと終了フレームを入力できます。「Use Full」をクリックするとTimelineの全範囲に設定されます。「Use Loop」をクリックするとシーケンス上の現在のループ範囲を選択できます(ループ範囲が設定されている場合)。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Load on Completion</p>
+<p>この設定にチェックを入れると、レンダリング完了後にxSTUDIOが出力を即座にロードします。出力は<strong>「Render Outputs」</strong>という名前のPlaylistに追加されます。これにより、レンダリング結果をすぐに確認できます。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Output Resolution</p>
+<p>ドロップダウンリストから出力解像度を選択します。このリストは拡張可能です。ボックス内の<strong>「x」</strong>ボタンをクリックして一度クリアし、&lt;xピクセル&gt;x&lt;yピクセル&gt; (オプション名)の形式で新しい解像度を入力してください。例えば、単に<strong>1280x720</strong>や<strong>2560x1440 (QHD)</strong>のように入力します。新しい解像度を追加すると、xSTUDIOは今後のセッションのためにユーザー設定にそれを保存します。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Frame Rate</p>
+<p>出力のフレームレートを選択します。このオプションは、レンダリングフレームレートが元のMediaのフレームレートと一致しない場合でも、リスピード(速度変更)は実行しません。代わりに、正確なビデオレートの「プルダウン」マッピングを実行します。例えば、Mediaが24fpsで48fpsとしてレンダリングする場合、出力クリップは元のソースと視覚的に同じ速度で再生されます。このとき、ソースMediaの各フレームが出力レンダリング内で2回ずつ繰り返されます。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Video &amp; Audio Encoding Preset</p>
+<p>以下で詳しく説明します。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Render Audio</p>
+<p>このチェックボックスを使用するとオーディオをオフにできます。オフにした場合、出力ファイルにオーディオストリームは追加されません。</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">OCIO Display and OCIO View</p>
+<p>これらの設定は、エンコーディング用に生成される画像に適用されるカラーマネジメントを設定する上で非常に重要です。2つのドロップダウンのオプションは、レンダリング対象のPlaylist、Subset、Contact Sheet、またはSequence内にある最初のMedia項目に適用されている、アクティブなOpenColorIO(OCIO)設定によって規定されます。通常は、レンダリング対象の項目が画面上にあるときの、main interfaceにおけるOCIO設定を反映して初期化されます。一般に、OCIO DisplayとViewをxSTUDIO Viewportと一致するように設定すれば、Viewportでレンダリングターゲット項目を表示しているときと同じRGBピクセル値が出力レンダリングでも得られます。したがって、ここでカラーマネジメント設定を選択し、出力レンダリングにどのOCIO DisplayとViewを適用するかを決定するのは非常に簡単です。詳細については、<a class="reference internal" href="../appendix/colour_management.html#colour-management"><span class="std std-ref">Colour Management</span></a>セクションを参照してください。</p>
+<p>xSTUDIOは、異なるMedia項目に異なるOCIO設定を適用する機能を備えています。ただし、これは通常、必要なカラーマネジメントメタデータを注入するパイプライン統合プラグインをセットアップしているスタジオにのみ適用されます。異なるOCIO設定がアタッチされたMedia項目を含むPlaylistがある場合、選択されたDisplayが指定のOCIO設定に対して有効である限り、Display設定は通常尊重されます。指定されたMedia項目のView設定は、そのMedia項目が画面上にあるときにmain interfaceで設定されている対応するView設定にデフォルトで切り替わります。</p>
+</aside>
+</section>
+<section id="executing-monitoring-and-checking-a-render">
+<h2>Executing, Monitoring and Checking a Render<a class="headerlink" href="#executing-monitoring-and-checking-a-render" title="Link to this heading"></a></h2>
+<p>出力用のファイルシステムパスを指定すると、「Render」ボタンがクリック可能になり、ジョブをレンダーキューに送ることができます。一度に複数のレンダリングをキューに入れることも可能です。Playlistパネルで複数の項目を選択している場合、「Render」ボタンを押すと次の項目のためにRenderダイアログがリフレッシュされます。「Skip」ボタンを使用すると、現在のPlaylist項目をスキップして、選択されている次の項目のレンダリング設定に進むことができます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>xSTUDIOの出力レンダリング機能は、完全にバックグラウンドで動作します。そのため、レンダリングの進行中もxSTUDIOのインターフェースをそのまま使用し続けることができます。十分なRAM、最新のGPU、およびハイスペックなCPUを搭載したシステムであれば、レンダリング中もxSTUDIOのパフォーマンスに目立った影響は出ない場合もあります。そのままMediaの再生やレビューを続けることが可能です。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>レンダリングがキューに入れられると、対象のPlaylist、Subset、Contact Sheet、またはSequenceの完全かつ正確なコピーが内部で作成されます。そのため、キューに入れた後にPlaylistなどに変更を加えたり、セッションから削除したりした場合でも、レンダリングに影響はありません。</p>
+</div>
+<p>「Render」ボタンを押すと、Playlistsパネルの右上に次のようなレンダリングステータスボタンが表示されます。</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-03.gif"><img alt="Render Video dialog" src="../../_images/export-to-movie-03.gif" style="width: 512.0px; height: 320.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">ムービーボタンのハイライトがアニメーションしている場合は、xSTUDIOがレンダリング中であることを示しています。</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>このボタンをクリックすると、レンダーキューを表示できます。xSTUDIOは一度に1つの出力をレンダリングします。キューに送られた順に処理が実行されます。</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-04.png"><img alt="Render Queue" src="../../_images/export-to-movie-04.png" style="width: 1280.0px; height: 385.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">レンダーキューのインターフェースです。Playlistsパネルの右上に表示されるムービーボタンをクリックするとアクセスできます。</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>ジョブが完了すると、緑色のチェックマークアイコンにマウスを合わせることで「再生」ボタンが表示されます。これをクリックすると、<a class="reference internal" href="quick_view.html#quick-view"><span class="std std-ref">Quick View</span></a>ウィンドウが開き、レンダリングされた出力をすぐに確認できます。失敗したレンダリングは、赤色の警告アイコンで表示されます。モニターのハートビート(心拍)アイコンのボタンをクリックすると、レンダリング中および完了後の両方でFFmpegの完全なログを確認できます。これはレンダリングが失敗した際に非常に役立ちます。レンダリングは、開始前または進行中であってもゴミ箱ボタンでキャンセルできます。また、ゴミ箱ボタンは正常に完了したレンダリングをキューから消去する際にも使用します。</p>
+</section>
+<section id="output-video-and-audio-codec-settings">
+<h2>Output Video and Audio Codec Settings<a class="headerlink" href="#output-video-and-audio-codec-settings" title="Link to this heading"></a></h2>
+<section id="how-the-renderer-works">
+<h3>How the Renderer Works<a class="headerlink" href="#how-the-renderer-works" title="Link to this heading"></a></h3>
+<p>コーデックの詳細に入る前に、xSTUDIOのレンダラーがどのように動作するかを知ることは有用です。レンダリング中、xSTUDIOはオフスクリーンのViewportを使用して画像フレームを生成します。その画像データは「パイプ」と呼ばれる仮想ファイルに書き込まれます。この処理はバックグラウンドプロセスで行われるため、xSTUDIOのインターフェースがフリーズすることはありません。また、xSTUDIOはバックグラウンドで、有名なメディアエンコード/デコードアプリケーションである<a class="reference external" href="https://ffmpeg.org/ffmpeg.html">FFmpeg</a>のインスタンスを起動します。このFFmpegプロセスは、パイプを介してxSTUDIOから画像(およびオーディオサンプル)を受け取るように設定されています。ユーザーにとって重要なのは、起動時にFFmpegに渡されるパラメータを、FFmpegのコマンドラインインターフェースを介してユーザー自身が設定できる点です。そのため、出力ファイルの作成に使用されるビデオおよびオーディオのコーデック、ならびにそのチューニングパラメータを完全に自由に設定できます。ターミナルでFFmpegを実行する場合とまったく同じように、エンコードパラメータを指定するだけです。</p>
+</section>
+<section id="configuring-encoding-presets">
+<h3>Configuring Encoding Presets<a class="headerlink" href="#configuring-encoding-presets" title="Link to this heading"></a></h3>
+<p>Render Videoダイアログには、ビデオおよびオーディオコーデックのプリセットのドロップダウンリストがあります。その隣にはペンアイコンがあります。これをクリックすると、ビデオコーデックのプリセットパネルにアクセスできます。</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/export-to-movie-05.png"><img alt="Render Queue" src="../../_images/export-to-movie-05.png" style="width: 1095.0px; height: 452.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">The FFMpeg encode presets panel.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>このパネルでは、ビデオおよびオーディオエンコーディングの正確なFFmpeg出力パラメータを指定できます。既存のプリセット(読み取り専用のためリスト内ではグレーアウトされています)は、独自の新しいプリセットを追加する際の有用なリファレンスになります。FFmpegには、ビデオエンコーディングを微調整するための無数のコーデックオプションや特殊フィルターが存在しますが、ここではそのドキュメントは提供していません。幸いなことに、特定の出力を得るためのFFmpegの使用方法や最適化に関するQ&Aがウェブ上に数多く存在するため、必要な設定を見つけるのは難しくありません。オーディオのエンコーディングオプションは別の列で指定し、同様の原則が適用されます。多くのエンコーディング設定が可能であり、ビデオを正常に生成するためにはこれらを正しく設定することが不可欠です。なお、メインのビデオレンダーダイアログで「Render Audio」ボックスのチェックを外してオーディオをレンダリングしない場合は、オーディオエンコードオプションを空欄のままにしておくことができます。</p>
+<p>また、ビット深度のドロップダウン設定もあります。これは、xSTUDIOがFFmpegにパイプで送るRGB画像のカラー解像度を設定するものです。16ビットはより正確であり、10ビットや12ビットのビット深度を持つProResなどのビデオフォーマットを出力する場合に必要です。出力のチャンネルあたりが8ビットのみである他の多くのフォーマットでは、ソース画像に8ビットを選択することで、品質に影響を与えることなくレンダリング時間を大幅に短縮できます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ビデオエンコードのプリセットでは、出力ピクセルフォーマット(-pix_fmtオプション)を明示的に指定する必要があります。指定しない場合、FFmpegは入力ピクセルフォーマット(rgba)をそのまま引き渡そうとします。しかし、これはほとんどのビデオエンコーダーと互換性がないためです。</p>
+</div>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h3>
+<p>新しいエンコードプリセットを追加した際にレンダリングが失敗した場合は、設定のデバッグが必要です。レンダーキューのインターフェースから、ハートビートモニターボタンを介して失敗したレンダリングのFFmpeg出力ログにアクセスできます。FFmpegのログを非常に注意深く確認してください。エラー箇所を見つけるのが難しい場合もありますが、エラーの原因を確認できるはずです。原因を特定したら、レンダリングが成功するまでプリセットに戻って微調整を行ってください。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick_view.html" class="btn btn-neutral float-left" title="QuickView" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sdi_output.html" class="btn btn-neutral float-right" title="SDI: Video Output with Blackmagic Designs Decklink" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, DNeg.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
