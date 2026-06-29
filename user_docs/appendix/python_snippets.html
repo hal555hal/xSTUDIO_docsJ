@@ -103,30 +103,30 @@
              
   <section id="python-snippets">
 <span id="id1"></span><h1>Python ‘Snippets’<a class="headerlink" href="#python-snippets" title="Link to this heading"></a></h1>
-<p>A Python <em>snippet</em> is a self contained Python script that can be executed within xSTUDIO from the Snippets menu or from the Media List menu. The idea is to provide a convenient way to add useful Python scripts to your xSTUDIO environment to automate certain tasks, build playlists or any other interaction with the Session through the Python API</p>
+<p>Pythonの<em>snippet</em>は、SnippetsメニューまたはMedia ListメニューからxSTUDIO内で実行できる、自己完結型のPython scriptです。この目的は、便利なPython scriptsをxSTUDIO環境に追加し、特定のタスクの自動化、playlistsのbuild、あるいはPython APIを介したSessionとのその他の相互作用を行うための便利な方法を提供することです。</p>
 <section id="creating-a-snippet">
 <h2>Creating a Snippet<a class="headerlink" href="#creating-a-snippet" title="Link to this heading"></a></h2>
-<p>To create a snippet you simply need to create file with ‘.py’ extension in one of the locations that xSTUDIO scans for snippets. These locations are controlled by the snippets path Preference, which is a list of filesystem paths. By default, one of the paths that xSTUDIO checks is <strong>xStudio/snippets</strong> in your <strong>$HOME</strong> folder. So if you make an <strong>xStudio</strong> folder in your home space (be careful with the letter case) and then a <strong>snippets</strong> folder within, then you can put snippets into that location and xSTUDIO will find them.</p>
-<p>So for example, in this screen shot the path <strong>/user_data/ted/snippets</strong> has been added to the snippets path via the Preferences Manager …</p>
+<p>snippetを作成するには、xSTUDIOがsnippetsをスキャンする場所のいずれかに、拡張子が「.py」のファイルを作成するだけです。これらの場所は、ファイルシステムパスのリストであるsnippets pathの環境設定(Preference)によって制御されます。デフォルトでxSTUDIOがチェックするパスの1つは、<strong>$HOME</strong>フォルダ内の<strong>xStudio/snippets</strong>です。そのため、ホームスペースに<strong>xStudio</strong>フォルダを作成し(大文字と小文字に注意してください)、その中に<strong>snippets</strong>フォルダを作成すれば、その場所にsnippetsを配置してxSTUDIOに検出させることができます。</p>
+<p>たとえば、このスクリーンショットでは、Preferences Managerを介してパス<strong>/user_data/ted/snippets</strong>がsnippets pathに追加されています…</p>
 <figure class="align-center" id="id2">
 <img alt="Setting the snippets path" src="../../_images/snippets-01.png" />
 <figcaption>
 <p><span class="caption-text">Setting the snippets search path</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>Now if I create a file called <strong>my_test_snippet.py</strong> in the default location in my home space here <strong>C:\Users\tedwaine\xStudio\snippets</strong> and then, under the <em>Snippets</em> menu I hit <em>Reload</em> then my Snippets menu looks like this:</p>
+<p>ここで、私のホームスペースにあるデフォルトの場所<strong>C:\Users\tedwaine\xStudio\snippets</strong>に<strong>my_test_snippet.py</strong>というファイルを作成し、<em>Snippets</em>メニューの下にある<em>Reload</em>を押すと、私のSnippetsメニューは以下のようになります：</p>
 <figure class="align-center">
 <img alt="Snippets menu" src="../../_images/snippets-02.png" />
 </figure>
-<p>Now if I click on ‘My Test Snippet’ the code in the my_test_snippet.py file is executed in xSTUDIO’s python interpreter.</p>
+<p>ここで「My Test Snippet」をクリックすると、my_test_snippet.pyファイル内のコードがxSTUDIOのpython interpreter内で実行されます。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can also make snippets appear in the Media List right-click Context/More menu. Add another folder name <strong>media</strong> within one of the folders that is scanned for snippets. Any .py files inside the <strong>media</strong> folder will appear in a <strong>Snippets</strong> sub-menu in the Media List menu.</p>
+<p>Media Listの右クリックによるContext/Moreメニューにsnippetsを表示させることもできます。snippets用にスキャンされるフォルダのいずれかの内部に、<strong>media</strong>という名前の別のフォルダを追加します。<strong>media</strong>フォルダ内にあるすべての.pyファイルは、Media Listメニュー内の<strong>Snippets</strong>サブメニューに表示されます。</p>
 </div>
 </section>
 <section id="example-snippet">
 <h2>Example Snippet<a class="headerlink" href="#example-snippet" title="Link to this heading"></a></h2>
-<p>You can run any python code you desire from a snippet. Here is a simple example that will randomise the colours of all the <em>selected</em> clips within the currently viewed Sequence (if there is a Sequence being viewed in the Viewport)</p>
+<p>snippetからは、お好みのあらゆるpythonコードを実行できます。以下は、現在表示されているSequence内にあるすべての<em>選択された</em>クリップの色をランダムにするシンプルな例です(ViewportでSequenceが表示されている場合)。</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">my_test_snippet.py</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">xstudio.api.session.playlist.timeline</span> <span class="kn">import</span> <span class="n">Timeline</span><span class="p">,</span> <span class="n">Clip</span>

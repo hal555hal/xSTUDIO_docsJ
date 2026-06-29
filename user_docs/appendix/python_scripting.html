@@ -104,31 +104,31 @@
              
   <section id="python-scripting-introduction">
 <span id="python-scripting"></span><h1>Python Scripting Introduction<a class="headerlink" href="#python-scripting-introduction" title="Link to this heading"></a></h1>
-<p>xSTUDIO has a python API allowing you to control playback, load media, explore playlists, explore media and more via python scripting. A feature of this API is that behind the scenes all interactions between the Python interpreter and the xSTUDIO application are achieved via a network socket. This means that you can execute python code to control xSTUDIO either in the embedded python interpreter in xSTUDIO or in a completely different process so that your python execution will not block xSTUDIO and vice versa.</p>
+<p>xSTUDIOにはpython APIがあり、python scriptingを介して再生の制御、メディアのロード、プレイリストやメディアの探索などを行うことができます。このAPIの特徴は、pythonインタプリタとxSTUDIOアプリケーション間のすべての相互作用が、バックグラウンドでnetwork socketを介して行われる点です。これにより、xSTUDIOに組み込まれたpythonインタプリタ内、または完全に別のプロセスのいずれでもxSTUDIOを制御するpythonコードを実行できるため、pythonの実行がxSTUDIOをブロックすることはなく、その逆も同様です。</p>
 <section id="executing-python-code">
 <h2>Executing Python Code …<a class="headerlink" href="#executing-python-code" title="Link to this heading"></a></h2>
 <section id="within-the-application">
 <h3>… within the Application<a class="headerlink" href="#within-the-application" title="Link to this heading"></a></h3>
-<p>xSTUDIO has an embedded Python interpreter allowing you to run code within the application. Both <a class="reference internal" href="python_snippets.html#python-snippets"><span class="std std-ref">Python snippets</span></a> and <a class="reference internal" href="python_plugins.html#python-plugins"><span class="std std-ref">Python plugins</span></a> provide simple ways to run your custom code within xSTUDIO, as well as the Python interpreter interface panel for interactive execution of Python commands in the application itself.</p>
+<p>xSTUDIOには組み込みのPython interpreterがあり、アプリケーション内でコードを実行できます。<a class="reference internal" href="python_snippets.html#python-snippets"><span class="std std-ref">Python snippets</span></a>と<a class="reference internal" href="python_plugins.html#python-plugins"><span class="std std-ref">Python plugins</span></a>は、xSTUDIO内でカスタムコードを実行するためのシンプルな方法を提供します。また、アプリケーション自体でPythonコマンドをインタラクティブに実行するためのPython interpreterインターフェースパネルも用意されています。</p>
 </section>
 <section id="remotely">
 <h3>… remotely<a class="headerlink" href="#remotely" title="Link to this heading"></a></h3>
-<p>You can also execute Python code <em>outside</em> of xSTUDIO in order to control an instance of the application remotely as described below. In order for this to happen, however, you must be sure that you are running a version of Python that is compatible with the version of Python that xSTUDIO was built with. Also the xSTUDIO python module location should be included on the <em>sys.path</em> list.  Better still, if your xSTUDIO installation <em>includes</em> Python itself (which is normally the case on MacOS and Windows) then you can run python from the xSTUDIO installation and your script should work without worrying about <em>sys.path</em>.</p>
-<p>Running a script on Windows could look <em>something</em> like this, depending on which version of xSTUDIO you have installed. You can set-up appropriate powershell shortcuts or desktop shortcuts to make this much more convenient.</p>
+<p>以下で説明するように、xSTUDIOのインスタンスをリモートで制御するために、xSTUDIOの<em>外部</em>からPythonコードを実行することもできます。ただし、これを実現するには、xSTUDIOがbuiltされたときと同じバージョンのPythonと互換性のあるバージョンのPythonを実行している必要があります。また、xSTUDIOのPythonモジュールの場所が<em>sys.path</em>リストに含まれている必要があります。さらに良いことに、xSTUDIOのインストールにPython自体が<em>含まれている</em>場合(MacOSおよびWindowsでは通常これが該当します)、xSTUDIOのインストールからPythonを実行できるため、<em>sys.path</em>を気にすることなくスクリプトが動作します。</p>
+<p>Windowsでのスクリプトの実行は、インストールされているxSTUDIOのバージョンによって異なりますが、<em>一例として</em>以下のようになります。これらをはるかに便利にするために、適切なPowerShellショートカットやデスクトップショートカットをセットアップできます。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39;C:\Program Files\xSTUDIO 1.0.0\bin\python3\python.exe&#39;</span><span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\t</span>edwaine<span class="se">\d</span>ev<span class="se">\x</span>studio_scripts<span class="se">\m</span>y_script.py
 </pre></div>
 </div>
-<p>Running a script on MacOS could look <em>something</em> like this, depending on which version of xSTUDIO you have installed. You can set-up terminal alias commandas or shortcuts to make this much more convenient.</p>
+<p>MacOSでのスクリプトの実行は、インストールされているxSTUDIOのバージョンによって異なりますが、<em>一例として</em>以下のようになります。これらをはるかに便利にするために、ターミナルのエイリアスコマンドやショートカットをセットアップできます。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/Applications/xSTUDIO.app/Contents/MacOS/python3.12<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\t</span>edwaine<span class="se">\d</span>ev<span class="se">\x</span>studio_scripts<span class="se">\m</span>y_script.py
 </pre></div>
 </div>
-<p>On Linux, installation of xSTUDIO is less self-contained than the other distributions and xSTUDIO may have been built with the version of Python on your operating system. As such, you may be able to modify the <em>PYTHONPATH</em> environment variable or the <em>sys.path</em> at the head of your script to ensure that the xSTUDIO python modules can be found on the Python search path. You can then run scripts directly.</p>
+<p>Linuxでは、xSTUDIOのインストールは他のディストリビューションほど自己完結しておらず、xSTUDIOはお使いのオペレーティングシステムのPythonのバージョンでbuiltされている場合があります。そのため、スクリプトの先頭で<em>PYTHONPATH</em>環境変数や<em>sys.path</em>を修正して、Pythonの検索パス上でxSTUDIOのPythonモジュールが確実に検出されるようにする必要がある場合があります。これにより、スクリプトを直接実行できるようになります。</p>
 </section>
 </section>
 <section id="the-communications-port">
 <h2>The Communications Port<a class="headerlink" href="#the-communications-port" title="Link to this heading"></a></h2>
-<p>xSTUDIO opens a port on startup for remote control which is subsequently used by the Python API and also for ‘pushing’ media to a running session through the command line. The range of port numbers that xSTUDIO will try to open can be specified as a command line option or in the preferences files. When creating a Connection object in Python, you can specify the port number of the xSTUDIO session that you want to connect with. For studios that are interested in managing mulitple instances of xSTUDIO to support a workflow this can be exploited with appopriate wrapper scripts and python integration code</p>
-<p>Launch xSTUDIO with a specific port:</p>
+<p>xSTUDIOは起動時にリモートコントロール用のポートを開きます。このポートは、その後Python APIによって使用されるほか、コマンドラインを介して実行中のセッションにメディアを「プッシュ」するためにも使用されます。xSTUDIOがオープンを試みるポート番号の範囲は、コマンドラインオプションまたは環境設定ファイルで指定できます。PythonでConnectionオブジェクトを作成するときに、接続先となるxSTUDIOセッションのポート番号を指定できます。ワークフローをサポートするためにxSTUDIOの複数のインスタンスを管理することに関心があるスタジオでは、適切なラパースクリプトやPython統合コードを使用してこの機能を活用できます。</p>
+<p>特定のポートを指定してxSTUDIOを起動する：</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">xstudio</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">45501</span>
 </pre></div>
 </div>
@@ -147,8 +147,8 @@
 </section>
 <section id="python-scripting-examples">
 <h2>Python Scripting Examples<a class="headerlink" href="#python-scripting-examples" title="Link to this heading"></a></h2>
-<p>Aside from python ‘plugins’, which are essentially scripts that instance a custom plugin class to handle callbacks and manage certain typical communication with the core app, you also can do many things through straightforward scripts.</p>
-<p><strong>Here’s a really basic example that prints out all the media paths in your session.</strong></p>
+<p>コールバックを処理し、コアアプリケーションとの特定の典型的な通信を管理するためのカスタムプラグインクラスをインスタンス化するスクリプトであるpythonの「plugins」以外にも、シンプルなscriptsを介して多くのことを実行できます。</p>
+<p><strong>以下は、セッション内のすべてのメディアパスをプリントアウトする非常に基本的な例です。</strong></p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">Print all media paths from current xSTUDIO session</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
@@ -168,7 +168,7 @@
 </pre></div>
 </div>
 </div>
-<p><strong>The following example shows how you can start building a playlist, modify media play rate and start playback:</strong></p>
+<p><strong>以下の例は、playlistのbuildingを開始し、メディアのplay rateを変更して、playbackを開始する方法を示しています。</strong></p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Adding and playing media basics</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">xstudio.connection</span> <span class="kn">import</span> <span class="n">Connection</span>

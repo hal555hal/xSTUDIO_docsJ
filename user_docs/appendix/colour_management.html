@@ -102,33 +102,33 @@
              
   <section id="colour-management">
 <span id="id1"></span><h1>Colour Management<a class="headerlink" href="#colour-management" title="Link to this heading"></a></h1>
-<p>xSTUDIO features colour management thanks to integration with the <a class="reference external" href="https://opencolorio.org/">OpenColorIO (OCIO)</a> framework. With the appropriate configuration files in place it can be ensured that that the colour profile of your display device (monitor, projector etc) is combined correctly with the media source colour space such that the final image is represented correctly. Artistic look modifications such as grading values or a film emulation LUT can also be incorporated before pixels hit the screen. xSTUDIO takes advantage of the latest V2 features of OCIO to compute colour space transforms and apply LUTs on your graphics card for guranteed accuracy and high performance.</p>
+<p>xSTUDIOは、<a class="reference external" href="https://opencolorio.org/">OpenColorIO (OCIO)</a>フレームワークとの統合により、colour management機能を備えています。適切な構成ファイルを配置することで、ディスプレイデバイス(モニター、プロジェクターなど)のカラープロファイルとメディアソースのカラースペースが正しく結合され、最終的な画像が正確に表現されます。ピクセルが画面に表示される前に、グレーディング値やフィルムエミュレーションLUTなどのアーティスティックなルックの変更を組み込むこともできます。xSTUDIOは、OCIOの最新のV2機能を活用して、グラフィックスカード上でカラースペースの変換を計算し、LUTを適用するため、確実な正確性と高いパフォーマンスが保証されます。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>xSTUDIO is shipped with some default OCIO configurations, including the standard <a href="#id3"><span class="problematic" id="id4">`OpenColorIO ACES &lt;https://en.wikipedia.org/wiki/Academy_Color_Encoding_System&gt; config.`_</span></a> You can select which configuration is active from the Colour tab in the <a class="reference internal" href="preference_files.html#preferences"><span class="std std-ref">Preferences Manager</span></a>.</p>
+<p>xSTUDIOにはいくつかのデフォルトのOCIO構成が同梱されており、これには標準の<a href="#id3"><span class="problematic" id="id4">`OpenColorIO ACES &lt;https://en.wikipedia.org/wiki/Academy_Color_Encoding_System&gt; config.`_</span></a>が含まれています。環境設定マネージャー(<a class="reference internal" href="preference_files.html#preferences"><span class="std std-ref">Preferences Manager</span></a>)のColourタブから、どの構成をアクティブにするかを選択できます。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If advanced colour management is not necessary: xSTUDIO works out-of-the-box without OCIO features enabled. From the <strong>Colour</strong> menu item in the main menu bar at the top of the interface check the ‘Bypass Colour Management’ option.</p>
+<p>高度なcolour managementが必要ない場合：xSTUDIOはOCIO機能を有効にしなくても、out-of-the-boxで動作します。インターフェース上部のメインメニューバーにある<strong>Colour</strong>メニュー項目から、「Bypass Colour Management」オプションをチェックしてください。</p>
 </div>
-<p>The following guide applies if you do have a valid OCIO configuration in place:</p>
+<p>以下のガイドは、有効なOCIO構成が配置されている場合に適用されます：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Toolbar ‘Display’ options:</strong> Use this toolbar button to choose the appropriate display device from the list to match your given display hardware. Your selection is saved to your local preferences files and will persist between sessions.</p></li>
-<li><p><strong>Toolbar ‘View’ options</strong> - Use this toolbar button to select the combined View and Look</p></li>
+<li><p><strong>ツールバーの「Display」オプション：</strong>このツールバーボタンを使用して、リストからご使用のディスプレイハードウェアに一致する適切なディスプレイデバイスを選択します。選択内容はローカルの環境設定ファイルに保存され、セッション間で保持されます。</p></li>
+<li><p><strong>ツールバーの「View」オプション</strong> - このツールバーボタンを使用して、組み合わされたViewとLookを選択します。</p></li>
 </ul>
 </div></blockquote>
-<p>The colour management system works by converting the colour space of the media being viewed to the display colourspace of your display device (laptop screen / PC monitor etc.). As such, OCIO needs to know the colourspace of your media. It has some logic to try and infer this automatically, but you can also manually set the source colourspace. This can be done by right-mouse clicking in the Viewpoer (or click the More button to the top right of the Viewport) and going into the OCIO-&gt;Source sub-menu.</p>
+<p>colour managementシステムは、表示されているメディアのカラースペースをご使用のディスプレイデバイス(ノートPCの画面/PCモニターなど)のディスプレイカラースペースに変換することによって動作します。そのため、OCIOはメディアのカラースペースを認識する必要があります。これを自動的に推測するいくつかのロジックが備わっていますが、ソースカラースペースを手動で設定することもできます。これは、Viewport内でマウスを右クリックする(またはViewportの右上にあるMoreボタンをクリックする)か、OCIO-&gt;Sourceサブメニューにアクセスすることで実行できます。</p>
 <section id="ocio-configuration-for-developers">
 <h2>OCIO Configuration (For Developers)<a class="headerlink" href="#ocio-configuration-for-developers" title="Link to this heading"></a></h2>
-<p>To take advantage of these features you will need the required OCIO configuration file and associated LUT data files to be present on your filesystem. For most VFX studios and other post production facilities the configuration of OCIO data is managed by specialist individuals or teams and we take it as read that such technical expertise is on hand. See <a class="reference external" href="https://opencolorio.org/">the ocio website</a> for full details.</p>
+<p>これらの機能を活用するには、必要なOCIO構成ファイルと、それに関連付けられたLUTデータファイルがfilesystem上に存在する必要があります。ほとんどのVFXスタジオやその他のポストプロダクション施設では、OCIOデータの構成は専門の個人またはチームによって管理されており、そのような技術的専門知識がすぐに利用できることを前提としています。詳細については、<a class="reference external" href="https://opencolorio.org/">ocioのウェブサイト</a>を参照してください。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The OCIO integration with xSTUDIO is implemented as a plugin. This was done so that any studios wishing to add their own OCIO implementation, or some other colour management system, can do so. The OCIO plugin code shipped with xSTUDIO can act as a reference implementation in this case.</p>
+<p>xSTUDIOへのOCIO統合はpluginとして実装されています。これは、独自のOCIO実装やその他のcolour managementシステムを追加したいスタジオが、それを行えるようにするために実施されました。xSTUDIOに同梱されているOCIO pluginコードは、この場合のリファレンス実装として機能します。</p>
 </div>
-<p>As per the convention xSTUDIO will load the config file from a path stored in the <strong>$OCIO environment variable</strong>. You can override this <em>per media source</em> by setting a special metadata value on the media using either the python API or implementing a ‘media hook’ C++ plugin to add the necessary metadata. Essentially, the ‘media hook’ plugin provides a callback function that is executed whenever xSTUDIO loads new media. The function returns a json dictionary that is merged into the new media item’s metadata. This is one mechanism (among several) that allows the addition of custom metadata to media on creation.</p>
-<p>As part of this custom metadata you can add an ‘colour_pipeline’ dictionary which will include string key/value pairs that the OCIO plugin will look for. xSTUDIO’s OCIO plugin uses these key/value pairs to initiate the context object in the OCIO processors, as well as which OCIO config file to load and apply. So if, for example, your OCIO config is set-up to use file path matching rules to find grading data using the SHOT key, you would set the SHOT value in the media hook plugin. Please refer to the ‘dneg.cpp’ file in the xSTUDIO source code tree to see DNEG’s own implementation for reference.</p>
-<p>You can also set an ‘ocio_config’ value in the media metadata to bypass the OCIO envorinment variable and instead set the OCIO config per source.</p>
+<p>慣例に従い、xSTUDIOは<strong>$OCIO環境変数</strong>に格納されたパスから構成ファイルをロードします。python APIを使用するか、必要なメタデータを追加するための「media hook」C++ pluginを実装して、メディアに特別なメタデータ値を設定することにより、これを<em>メディアソースごとに</em>オーバーライドできます。本質的に、「media hook」pluginは、xSTUDIOが新しいメディアをロードするときはいつでも実行されるコールバック関数を提供します。この関数は、新しいメディアアイテムのメタデータにマージされるjsonディクショナリを返します。これは、作成時にメディアにカスタムメタデータを追加することを可能にするメカニズムの1つ(いくつかあるうちの1つ)です。</p>
+<p>このカスタムメタデータの一部として、OCIO pluginが検索する文字列のキー/値のペアを含む「colour_pipeline」ディクショナリを追加できます。xSTUDIOのOCIO pluginは、これらのキー/値のペアを使用して、OCIOプロセッサ内のcontextオブジェクトを初期化するだけでなく、どのOCIO構成ファイルをロードして適用するかを決定します。たとえば、SHOTキーを使用してグレーディングデータを見つけるために、ファイルパス一致ルールを使用するようにOCIO構成がセットアップされている場合、media hook pluginでSHOTの値を設定します。参照用のDNEG独自の実装については、xSTUDIOソースコードツリー内の「dneg.cpp」ファイルを参照してください。</p>
+<p>メディアメタデータに「ocio_config」値を設定して、OCIO環境変数をバイパスし、代わりにソースごとにOCIO構成を設定することもできます。</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">Example showing how to set OCIO config and context overrides on all media sources in a session</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">xstudio.connection</span> <span class="kn">import</span> <span class="n">Connection</span>
